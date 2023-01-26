@@ -12,6 +12,74 @@
 
 .main-container {
   background-color: #242424;
+
   width: 100vw;
   height: 100vh;
+  padding: 20px;
+  overflow-y: scroll;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container button {
+  color: #db3eb1;
+  border: 3px solid #db3eb1;
+  background-color: transparent;
+  border-radius: 15px;
+  padding: 15px 25px;
+  font-size: 18px;
+  font-family: tahoma;
+  letter-spacing: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.5s;
+}
+
+.container button:hover {
+  color: white;
+  background-color: #db3eb1;
+  filter: drop-shadow(0 0 20px #db3eb1) contrast(2) brightness(2);
+}
+
+.container span {
+  margin-top: 10px;
+  font-size: 20px;
+  color: white;
+  font-weight: bold;
+}
+
+.loader {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.spinner {
+  width: 110px;
+  height: 110px;
+  border: 15px solid transparent;
+  border-top: 15px solid #db3eb1;
+  border-radius: 50%;
+  animation: spinner 0.7s linear infinite;
+  filter: drop-shadow(0 0 20px #db3eb1) contrast(2) brightness(2);
+}
+
+.gifs-container {
+  margin-top: 20px;
+}
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
